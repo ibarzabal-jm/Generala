@@ -63,8 +63,6 @@ function getCantidades(jugada){
 
 		let escalera=false;
 
-		analisis.includes(2)
-
 		analisis.forEach(
 			function(elemento){
 				if(elemento == 1){
@@ -89,8 +87,16 @@ function getCantidades(jugada){
 	function jugar(){
 
 		let jugada = getJugada();
+		/*
+		let valor=2;
+		jugada.forEach(
+			function(elemento,indice, jugada){
 
+				jugada[indice] = valor++;
 			}
+		)
+		*/
+		
 		let analisis = getCantidades(jugada);
 			
 		let contenedorJugada = document.getElementById("jugada");
