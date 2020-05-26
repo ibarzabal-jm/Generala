@@ -90,6 +90,7 @@ function getCantidades(jugada){
 
 		let jugada = getJugada();
 
+			}
 		let analisis = getCantidades(jugada);
 			
 		let contenedorJugada = document.getElementById("jugada");
