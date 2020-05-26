@@ -41,22 +41,22 @@ function getCantidades(jugada){
 		return cantidades;
 	}
 
-let analisis = getCantidades(jugada);
+
 	
 	
-	function esGenerala(jugada){
+	function esGenerala(analisis){
 		return analisis.includes(5);
 	}
 	
-	function esPoker(jugada){
+	function esPoker(analisis){
 		return analisis.includes(4);
 	}
 	
-	function esFull(jugada){
+	function esFull(analisis){
 		return analisis.includes(3) && analisis.includes(2);
 	}
 	
-	function esEscalera(jugada){
+	function esEscalera(analisis){
 		return analisis
 	}
 	
@@ -64,14 +64,19 @@ let analisis = getCantidades(jugada);
 	function jugar(){
 
 		let jugada = getJugada();
+
+		let analisis = getCantidades(jugada);
 			
 		let contenedorJugada = document.getElementById("jugada");
+
+		let contenedorAnalisis = document.getElementById("analisis");
 			
 		let contenedorResultado = document.getElementById("resultado");
 
 		contenedorJugada.innerHTML='';
+		contenedorAnalisis.innerHTML='';
+
 		
-	
 		
 		
 		for(let i=0; i < jugada.length; i++){
@@ -80,16 +85,23 @@ let analisis = getCantidades(jugada);
 			
 		}
 		
-		
-		if (esGenerala(jugada)){
+
+
+		for(let i=0; i < analisis.length; i++){
+			
+			contenedorAnalisis.innerHTML +=' '+analisis[i]+' ';
+			
+		}
+
+		if (esGenerala(analisis)){
 			contenedorResultado.innerHTML = 'Tu resultado es : Hay generala GANASETE'
 		
-		}else if(esPoker(jugada)){
+		}else if(esPoker(analisis)){
 			
 			contenedorResultado.innerHTML = 'Tu resultado es : Hay Poker GANASETE'
 		
 		
-		}else if(esFull(jugada)){
+		}else if(esFull(analisis)){
 			
 			contenedorResultado.innerHTML = 'Tu resultado es : Hay Full GANASETE'
 		
@@ -98,13 +110,15 @@ let analisis = getCantidades(jugada);
 			contenedorResultado.innerHTML = 'Tu resultado es :PERDISTE'
 		
 		}
+
+		
+		console.log(jugada);
+		console.log(analisis);
 	}
 	
 
 
 
-console.log(jugada);
-console.log( getCantidades(jugada));
 
 
 
