@@ -2,11 +2,6 @@ let btnJugar = document.getElementById('btn-jugar');
 btnJugar.addEventListener('click', jugar);
 
 
-function saludar(){
-	console.log('Hola')
-}
-
-
 function getDado(){
 		
 	return Math.floor( Math.random() * 6 + 1);
@@ -55,9 +50,39 @@ function getCantidades(jugada){
 	function esFull(analisis){
 		return analisis.includes(3) && analisis.includes(2);
 	}
+
+	function contador(){
+		let contado
+
+		return contador;
+	}
+	
 	
 	function esEscalera(analisis){
-		return analisis
+		let cuenta = 0;
+
+		let escalera=false;
+
+		analisis.includes(2)
+
+		analisis.forEach(
+			function(elemento){
+				if(elemento == 1){
+					cuenta++;
+				}else{
+					cuenta--;
+				}
+			}
+		)
+
+		if(cuenta = 5){
+			escalera = true;
+
+		}else{
+			escalera = false;
+		}
+
+		return escalera;
 	}
 	
 	
@@ -107,13 +132,14 @@ function getCantidades(jugada){
 		
 		} else {
 			
-			contenedorResultado.innerHTML = 'Tu resultado es :PERDISTE'
+			contenedorResultado.innerHTML = 'Tu resultado es :PERDISTE';
+			if(esEscalera(analisis)){
+				contenedorResultado.innerHTML = 'ESCALERA';
+			}
 		
 		}
 
 		
-		console.log(jugada);
-		console.log(analisis);
 	}
 	
 
