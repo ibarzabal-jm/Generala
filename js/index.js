@@ -46,6 +46,7 @@ function hacerEscalera(jugada){
 		}
 	)
 
+	jugada=[2,3,5,6,4];
 	return jugada;
 }
 
@@ -70,7 +71,7 @@ function hacerEscalera(jugada){
 		return contador;
 	}
 	
-	
+	/*
 	function esEscalera(analisis){
 		let cuenta = 0;
 
@@ -80,8 +81,6 @@ function hacerEscalera(jugada){
 			function(elemento){
 				if(elemento == 1){
 					cuenta++;
-				}else{
-					cuenta--;
 				}
 			}
 		)
@@ -95,7 +94,29 @@ function hacerEscalera(jugada){
 
 		return escalera;
 	}
-	
+	*/
+
+
+	function arraysIguales(arr1, arr2){
+		
+		for (var i = 0, len = arr1.length; i < len; i++){
+			if (arr1[i] !== arr2[i]){
+				return false;
+			}
+		}
+		return true; 
+	}
+
+	function esEscalera(jugada){
+		
+
+		jugada.sort((a, b) => a - b);
+		
+		let valor=[1,2,3,4,5];
+		let valor2=[2,3,4,5,6];
+
+		return (arraysIguales(jugada,valor) || arraysIguales(jugada,valor2));
+	}
 	
 	function jugar(){
 
@@ -146,7 +167,7 @@ function hacerEscalera(jugada){
 		} else {
 			
 			contenedorResultado.innerHTML = 'Tu resultado es :PERDISTE';
-			if(esEscalera(analisis)){
+			if(esEscalera(jugada)){
 				contenedorResultado.innerHTML = 'ESCALERA';
 			}
 		
