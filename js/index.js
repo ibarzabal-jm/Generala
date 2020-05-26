@@ -40,20 +40,25 @@ function getCantidades(jugada){
 		
 		return cantidades;
 	}
+
+let analisis = getCantidades(jugada);
 	
 	
 	function esGenerala(jugada){
-		return getCantidades(jugada).includes(5);
+		return analisis.includes(5);
 	}
 	
 	function esPoker(jugada){
-		return getCantidades(jugada).includes(4);
+		return analisis.includes(4);
 	}
 	
 	function esFull(jugada){
-		return getCantidades(jugada).includes(3) && getCantidades(jugada).includes(2);
+		return analisis.includes(3) && analisis.includes(2);
 	}
 	
+	function esEscalera(jugada){
+		return analisis
+	}
 	
 	
 	function jugar(){
