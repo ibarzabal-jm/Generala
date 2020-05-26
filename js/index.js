@@ -36,6 +36,19 @@ function getCantidades(jugada){
 		return cantidades;
 	}
 
+function hacerEscalera(jugada){
+	let valor=2; // poner 1 o 2 dependiendo si quiere salir [1,2,3,4,5] o [2,3,4,5,6]
+
+	jugada.forEach(
+		function(elemento,indice, jugada){
+
+			jugada[indice] = valor++;
+		}
+	)
+
+	return jugada;
+}
+
 
 	
 	
@@ -87,16 +100,9 @@ function getCantidades(jugada){
 	function jugar(){
 
 		let jugada = getJugada();
-		/*
-		let valor=2;
-		jugada.forEach(
-			function(elemento,indice, jugada){
-
-				jugada[indice] = valor++;
-			}
-		)
-		*/
 		
+		jugada = hacerEscalera(jugada);
+
 		let analisis = getCantidades(jugada);
 			
 		let contenedorJugada = document.getElementById("jugada");
