@@ -45,8 +45,6 @@ function hacerEscalera(jugada){
 			jugada[indice] = valor++;
 		}
 	)
-
-	jugada=[2,3,5,6,4];
 	return jugada;
 }
 
@@ -121,8 +119,6 @@ function hacerEscalera(jugada){
 	function jugar(){
 
 		let jugada = getJugada();
-		
-		jugada = hacerEscalera(jugada);
 
 		let analisis = getCantidades(jugada);
 			
