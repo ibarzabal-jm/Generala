@@ -134,10 +134,8 @@ function hacerEscalera(jugada){
 		
 		
 		
-		for(let i=0; i < jugada.length; i++){
-			
-			contenedorJugada.innerHTML +=' '+jugada[i]+' ';
-			
+		for(let i=0; i<jugada.length; i++){
+			contenedorJugada.innerHTML += '<img src="dados/dado' + jugada[i] + '.png"></img>';
 		}
 		
 
