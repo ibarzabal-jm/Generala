@@ -147,22 +147,22 @@ function hacerEscalera(jugada){
 		}
 
 		if (esGenerala(analisis)){
-			contenedorResultado.innerHTML = 'Tu resultado es : Hay generala GANASETE'
+			contenedorResultado.innerHTML = 'Tu resultado es : Hay generala Ganasteee!!!'
 		
 		}else if(esPoker(analisis)){
 			
-			contenedorResultado.innerHTML = 'Tu resultado es : Hay Poker GANASETE'
+			contenedorResultado.innerHTML = 'Tu resultado es : Hay Poker Ganasteee!!!'
 		
 		
 		}else if(esFull(analisis)){
 			
-			contenedorResultado.innerHTML = 'Tu resultado es : Hay Full GANASETE'
+			contenedorResultado.innerHTML = 'Tu resultado es : Hay Full Ganasteee!!!'
 		
 		} else {
 			
 			contenedorResultado.innerHTML = 'Tu resultado es :PERDISTE';
 			if(esEscalera(jugada)){
-				contenedorResultado.innerHTML = 'ESCALERA';
+				contenedorResultado.innerHTML = 'ESCALERA GANASTEE';
 			}
 		
 		}
