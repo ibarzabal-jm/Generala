@@ -10,20 +10,41 @@
 
         <link rel="stylesheet" href="./styles/style.css">
 
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
+
         
     </head>
     <body>
-        <h1>Juego Generala</h1>
 
-        <button id="btn-jugar">JUGUEMOS</button>
-        <div id="jugada"></div>
+        <div class="container-fluid principal text-center fluid">
+            <h1>Juego Generala por Ibarzabal Salles</h1>
+    
+            <button id="btn-jugar" type="button" class="btn btn-default">Tocá para Jugar</button>
+            
+            <div id="jugada"></div>
+    
+            <div id="analisis">Analisis de la jugada: </div>
+    
+            <div id="resultado" class="text-white"></div>
 
-        <div id="analisis">Analisis de la jugada: </div>
+        </div>
 
-        <div id="resultado"></div>
-
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
         
         <script src="./js/index.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     </body>
 </html>
