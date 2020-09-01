@@ -15,7 +15,7 @@ _Reglas_
 
 * Generala: Si los cinco dados tuvieran el mismo valor, son marcados 50 puntos;
 
-
+##Proxima Versión
 
 
 ## Autor ✒️
