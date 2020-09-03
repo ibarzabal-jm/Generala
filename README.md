@@ -16,6 +16,10 @@ _Reglas_
 * Generala: Si los cinco dados tuvieran el mismo valor, son marcados 50 puntos;
 
 
+## Próxima Version
+
+La idea es hacer una generala en React, donde se guarden los puntajes.
+
 
 
 ## Autor ✒️
